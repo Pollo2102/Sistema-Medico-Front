@@ -1,0 +1,33 @@
+
+
+.card-style {
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 350px;
+    padding: 40px;
+    font-weight: 900;
+    box-shadow: 5px 5px 5px -1px black;
+    border-color: black;
+    background-color: rgb(240, 141, 48);
+}
+
+.content {
+    display: block;
+    padding: 1px 50px 1px 50px;
+    margin-bottom: 50px;
+    /* background-color: rgb(240, 141, 48); */
+}
+
+.title {
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+}
+
+.nav-title {
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}

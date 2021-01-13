@@ -1,0 +1,27 @@
+<div>
+    <mat-sidenav-container>
+        <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <span class="nav-title">Sistema de Información de Salud</span>
+        </mat-toolbar>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <div class="content">
+        <mat-card class="card-style">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <h1 class="title">Ingresar</h1>
+                <mat-form-field>
+                  <mat-label for="username">Correo</mat-label>
+                  <input required formControlName="username" matInput placeholder="ejemplo@gmail.con">
+                </mat-form-field>
+              <br/>
+                <mat-form-field >
+                  <mat-label for="password">Contraseña</mat-label>
+                  <input required formControlName="password" type="password" matInput/>
+                </mat-form-field>
+                <br/><br/>
+                <button mat-raised-button color="primary">Ingresar</button>
+              </form>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+};
+
+.text {
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+}
