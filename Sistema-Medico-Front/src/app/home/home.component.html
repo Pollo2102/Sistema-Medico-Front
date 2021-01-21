@@ -1,10 +1,158 @@
-<div>
-    <mat-sidenav-container>
-        <mat-sidenav-content>
-        <mat-toolbar color="primary">
-            <span class="nav-title">Sistema de Información de Salud</span>
-        </mat-toolbar>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
-    LOGIN SUCCESFUL!!
+<div class="body">
+    <app-nav-bar>
+    </app-nav-bar>
+    <div>
+        <mat-tab-group class="card-style" dynamicHeight>
+            <mat-tab class="tab-style" label="Registrar">
+                
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Número de Identidad</mat-label>
+                    <input maxlength="13" required type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nombre Completo</mat-label>
+                    <input required matInput>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Escoja una fecha</mat-label>
+                    <input required matInput disabled [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker disabled="false"></mat-datepicker>
+                </mat-form-field>
+                
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Lugar de Nacimiento</mat-label>
+                    <input required matInput>
+                </mat-form-field>
+                
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Edad</mat-label>
+                    <input maxlength="3" required type="number" matInput>
+                </mat-form-field>
+
+                <br/>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nombre Madre</mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nombre Padre</mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Sexo</mat-label>
+                    <mat-select>
+                      <mat-option value="1">Masculino</mat-option>
+                      <mat-option value="2">Femenino</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Procedencia</mat-label>
+                    <input required matInput>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Estado Civil</mat-label>
+                    <mat-select>
+                      <mat-option value="0">Soltero</mat-option>
+                      <mat-option value="1">Casado</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Religión</mat-label>
+                    <mat-select>
+                      <mat-option value="0">Católico</mat-option>
+                      <mat-option value="1">Ortodoxo</mat-option>
+                      <mat-option value="2">Protestante</mat-option>
+                      <mat-option value="3">Musulman</mat-option>
+                      <mat-option value="4">Budista</mat-option>
+                      <mat-option value="5">Judío</mat-option>
+                      <mat-option value="6">Hindú</mat-option>
+                      <mat-option value="7">Taoista</mat-option>
+                      <mat-option value="8">Ateo</mat-option>
+                      <mat-option value="9">Otro</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Síntoma Principal</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Historia Enfermedad Actual</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Funciones Orgánicas Generales</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Revisión por Órganos, Aparatos y Sistemas</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Antecedentes Prenatales y Postnatales</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Datos del Nacimiento</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Antecedentes Personales Patológicos</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Antecedentes Personales No Patológicos</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Vacunación</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+                
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Escolaridad</mat-label>
+                    <mat-select>
+                        <mat-option value="0">Desconocido</mat-option>
+                        <mat-option value="1">Primaria</mat-option>
+                        <mat-option value="2">Secundaria</mat-option>
+                        <mat-option value="3">Universidad</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Medio Ambiente</mat-label>
+                    <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <br/>
+
+                <div class="reg-button">
+                    <button mat-raised-button color="primary">Registrar</button>
+                </div>
+                
+            </mat-tab>
+
+            
+            <mat-tab class="reg-button" label="Buscar">
+                Buscar 
+            </mat-tab>
+          </mat-tab-group>
+    </div>
 </div>

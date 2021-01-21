@@ -1,0 +1,47 @@
+html,body {
+    height: 100%;
+}
+
+.body {
+    padding-bottom: 1em;
+}
+
+.card-style {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    margin-right: 10%;
+    display: block;
+    max-width: 1500px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: 900;
+    box-shadow: 5px 5px 5px -1px black;
+    border-color: black;
+    background-color: rgb(243, 200, 59);
+}
+
+.field-style {
+    margin: 25px 25px 15px 0px;
+    max-width: 350px;
+    width: 20em;
+}
+
+.date-style {
+    margin: 25px 25px 15px 0px;
+    max-width: 350px;
+}
+
+.text-area-style {
+    margin: 25px 25px 15px 0px;
+    max-width: 35em;
+    width: 25em;
+}
+
+.reg-button {
+    float: right;
+    clear: both;
+    margin-right: 4%;
+}
