@@ -7,7 +7,7 @@
                 
                 <mat-form-field class="field-style" appearance="fill">
                     <mat-label>Número de Identidad</mat-label>
-                    <input maxlength="13" required type="number" matInput>
+                    <input [(ngModel)]="currentPatient.id" maxlength="13" required type="number" matInput>
                 </mat-form-field>
 
                 <mat-form-field class="field-style" appearance="fill">
@@ -19,7 +19,7 @@
                     <mat-label>Escoja una fecha</mat-label>
                     <input required matInput disabled [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker disabled="false"></mat-datepicker>
+                    <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
                 
                 <mat-form-field class="field-style" appearance="fill">
@@ -150,9 +150,125 @@
             </mat-tab>
 
             
-            <mat-tab class="reg-button" label="Buscar">
-                Buscar 
+             <mat-tab class="reg-button" label="Buscar">
+               
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Número de Identidad</mat-label>
+                    <input maxlength="13" required type="number" matInput>
+                </mat-form-field>
+
+                <button class="search-button" mat-raised-button color="primary">Buscar</button>
+
+                <br/>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nombre Completo</mat-label>
+                    <input disabled required matInput>
+                </mat-form-field>
+                
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Escoja una fecha</mat-label>
+                    <input matInput disabled>
+                </mat-form-field>
+                
+                
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Lugar de Nacimiento</mat-label>
+                    <input disabled required matInput>
+                </mat-form-field>
+                
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Edad</mat-label>
+                    <input disabled maxlength="3" required type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nombre Madre</mat-label>
+                    <input disabled matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nombre Padre</mat-label>
+                    <input disabled matInput>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Sexo</mat-label>
+                    <input disabled required matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Procedencia</mat-label>
+                    <input disabled matInput>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Estado Civil</mat-label>
+                    <input disabled matInput>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Religión</mat-label>
+                    <input disabled matInput>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Síntoma Principal</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Historia Enfermedad Actual</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Funciones Orgánicas Generales</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Revisión por Órganos, Aparatos y Sistemas</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Antecedentes Prenatales y Postnatales</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Datos del Nacimiento</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Antecedentes Personales Patológicos</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Antecedentes Personales No Patológicos</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Vacunación</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+                
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Escolaridad</mat-label>
+                    <input disabled matInput>
+                </mat-form-field>
+                
+                <mat-form-field class="text-area-style" appearance="fill">
+                    <mat-label>Medio Ambiente</mat-label>
+                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+
             </mat-tab>
+
           </mat-tab-group>
     </div>
 </div>

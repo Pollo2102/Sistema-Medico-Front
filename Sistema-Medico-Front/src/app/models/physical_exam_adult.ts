@@ -1,0 +1,31 @@
+export class Physical_Exam_Adult {
+    paciente_id: number;
+    fecha_examen: Date;
+    peso: number;
+    talla: number;
+    perimetro_cefalico: number;
+    temperatura: number;
+    presion_arterial: number;
+    frecuencia_cardiaca: number;
+    frecuencia_respiratoria: number;
+    pulso: number;
+    saturacion_oxigeno: number;
+    cabeza: string;
+    ojos: string;
+    oidos: string;
+    nariz: string;
+    boca: string;
+    cuello: string;
+    torax: string;
+    abdomen: string;
+    genitales: string;
+    extremidades: string;
+    tacto_rectal_vaginal: string;
+    piel_y_faneras: string;
+    examen_neurologico: string;
+    diagnostico_etario: string;
+    diagnostico_nutricional: string;
+    diagnostico_inmunologico: string;
+    diagnostico_socioeconomico: string;
+    diagnostico_patologico: string;
+}

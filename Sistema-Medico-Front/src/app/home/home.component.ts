@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Patient } from '../models/patient'
 
 @Component({
   selector: 'app-home',
@@ -7,12 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  userID: number;
+  currentPatient: Patient;
+
   picker: string;
   minDate: Date;
   maxDate: Date;
   
 
   constructor() {
+
+    this.userID = JSON.parse(localStorage.getItem('currentUser')).id;
+
+    this.currentPatient = new Patient();
 
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
