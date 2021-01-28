@@ -154,117 +154,117 @@
                
                 <mat-form-field class="field-style" appearance="fill">
                     <mat-label>Número de Identidad</mat-label>
-                    <input maxlength="13" required type="number" matInput>
+                    <input [(ngModel)]="getPatientID" maxlength="13" required type="number" matInput>
                 </mat-form-field>
 
-                <button class="search-button" mat-raised-button color="primary">Buscar</button>
+                <button (click)="getPatient()" class="search-button" mat-raised-button color="primary">Buscar</button>
 
                 <br/>
 
                 <mat-form-field class="field-style" appearance="fill">
                     <mat-label>Nombre Completo</mat-label>
-                    <input disabled required matInput>
+                    <input [(ngModel)]="getPatientObj.nombre_completo" disabled required matInput>
                 </mat-form-field>
                 
-                <mat-form-field class="date-style" appearance="fill">
-                    <mat-label>Escoja una fecha</mat-label>
-                    <input matInput disabled>
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Fecha de Nacimiento (mes/día/año)</mat-label>
+                    <input [(ngModel)]="showDate" matInput disabled>
                 </mat-form-field>
                 
                 
                 <mat-form-field class="field-style" appearance="fill">
                     <mat-label>Lugar de Nacimiento</mat-label>
-                    <input disabled required matInput>
+                    <input [(ngModel)]="getPatientObj.lugar_nacimiento" disabled required matInput>
                 </mat-form-field>
                 
                 <mat-form-field class="date-style" appearance="fill">
                     <mat-label>Edad</mat-label>
-                    <input disabled maxlength="3" required type="number" matInput>
+                    <input [(ngModel)]="getPatientObj.edad" disabled maxlength="3" required type="number" matInput>
                 </mat-form-field>
 
                 <mat-form-field class="field-style" appearance="fill">
                     <mat-label>Nombre Madre</mat-label>
-                    <input disabled matInput>
+                    <input [(ngModel)]="getPatientObj.nombre_madre" disabled matInput>
                 </mat-form-field>
 
                 <mat-form-field class="field-style" appearance="fill">
                     <mat-label>Nombre Padre</mat-label>
-                    <input disabled matInput>
+                    <input [(ngModel)]="getPatientObj.nombre_padre" disabled matInput>
                 </mat-form-field>
 
                 <mat-form-field class="date-style" appearance="fill">
                     <mat-label>Sexo</mat-label>
-                    <input disabled required matInput>
+                    <input [(ngModel)]="showSexo" disabled required matInput>
                 </mat-form-field>
 
                 <mat-form-field class="field-style" appearance="fill">
                     <mat-label>Procedencia</mat-label>
-                    <input disabled matInput>
+                    <input [(ngModel)]="getPatientObj.procedencia" disabled matInput>
                 </mat-form-field>
 
                 <mat-form-field class="date-style" appearance="fill">
                     <mat-label>Estado Civil</mat-label>
-                    <input disabled matInput>
+                    <input [(ngModel)]="showEstadoCivil" disabled matInput>
                 </mat-form-field>
 
                 <mat-form-field class="date-style" appearance="fill">
                     <mat-label>Religión</mat-label>
-                    <input disabled matInput>
+                    <input [(ngModel)]="showReligion" disabled matInput>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Síntoma Principal</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.sintoma_principal" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Historia Enfermedad Actual</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.historia_enfermedad_actual" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Funciones Orgánicas Generales</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.funciones_organicas_generales" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Revisión por Órganos, Aparatos y Sistemas</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.revision_por_organos_aparatos_sistemas" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Antecedentes Prenatales y Postnatales</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.antecedentes_prenatales_postnatales" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Datos del Nacimiento</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.datos_del_nacimiento" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Antecedentes Personales Patológicos</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.antecedentes_personales_patologicos" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Antecedentes Personales No Patológicos</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.antecedentes_personales_no_patologicos" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Vacunación</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.vacunacion" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
                 
                 <mat-form-field class="date-style" appearance="fill">
                     <mat-label>Escolaridad</mat-label>
-                    <input disabled matInput>
+                    <input [(ngModel)]="showEscolaridad" disabled matInput>
                 </mat-form-field>
                 
                 <mat-form-field class="text-area-style" appearance="fill">
                     <mat-label>Medio Ambiente</mat-label>
-                    <textarea disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
+                    <textarea [(ngModel)]="getPatientObj.medio_ambiente" disabled matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="6"></textarea>
                 </mat-form-field>
 
             </mat-tab>
