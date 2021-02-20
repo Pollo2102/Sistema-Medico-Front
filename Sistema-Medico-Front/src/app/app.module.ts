@@ -26,13 +26,15 @@ import { ErrorInterceptor } from './helpers/error.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { multicast } from 'rxjs/operators';
 import { HomeComponent } from './home/home.component';
+import { ExamenFisicoComponent } from './examen-fisico/examen-fisico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ExamenFisicoComponent
   ],
   imports: [
     BrowserModule,

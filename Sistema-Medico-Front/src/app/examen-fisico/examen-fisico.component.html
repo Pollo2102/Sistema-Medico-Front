@@ -1,0 +1,330 @@
+<div class="body">
+    <app-nav-bar>
+    </app-nav-bar>
+    <div>
+        <h1 class="title">Examen Físico</h1>
+        <mat-tab-group class="card-style" dynamicHeight>
+            <mat-tab class="tab-style" label="Registrar">
+                
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Número de Identidad</mat-label>
+                    <input [(ngModel)]="currentExamen.paciente_id" maxlength="13" required type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Fecha de Examen</mat-label>
+                    <input required [(ngModel)]="examDate" required matInput disabled [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker disabled="false"></mat-datepicker>
+                </mat-form-field>
+
+                <br/>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Peso (kg)</mat-label>
+                    <input [(ngModel)]="currentExamen.peso" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Talla</mat-label>
+                    <input [(ngModel)]="currentExamen.talla" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Perímetro Cefálico</mat-label>
+                    <input [(ngModel)]="currentExamen.perimetro_cefalico" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Temperatura (Celsius)</mat-label>
+                    <input [(ngModel)]="currentExamen.temperatura" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Presion Arterial</mat-label>
+                    <input [(ngModel)]="currentExamen.presion_arterial" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Frecuencia Cardiaca</mat-label>
+                    <input [(ngModel)]="currentExamen.frecuencia_cardiaca" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Frecuencia Respiratoria</mat-label>
+                    <input [(ngModel)]="currentExamen.frecuencia_respiratoria" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Pulso</mat-label>
+                    <input [(ngModel)]="currentExamen.pulso" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Saturación Oxígeno</mat-label>
+                    <input [(ngModel)]="currentExamen.saturacion_oxigeno" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Cabeza</mat-label>
+                    <input [(ngModel)]="currentExamen.cabeza" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Ojos</mat-label>
+                    <input [(ngModel)]="currentExamen.ojos" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Oidos</mat-label>
+                    <input [(ngModel)]="currentExamen.oidos" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nariz</mat-label>
+                    <input [(ngModel)]="currentExamen.nariz" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Boca</mat-label>
+                    <input [(ngModel)]="currentExamen.boca" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Cuello</mat-label>
+                    <input [(ngModel)]="currentExamen.cuello" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Torax</mat-label>
+                    <input [(ngModel)]="currentExamen.torax" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Abdomen</mat-label>
+                    <input [(ngModel)]="currentExamen.abdomen" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Genitales</mat-label>
+                    <input [(ngModel)]="currentExamen.genitales" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Extremidades</mat-label>
+                    <input [(ngModel)]="currentExamen.extremidades" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Tacto Rectal y Vaginal</mat-label>
+                    <input [(ngModel)]="currentExamen.tacto_rectal_vaginal" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Piel y Faneras</mat-label>
+                    <input [(ngModel)]="currentExamen.piel_y_faneras" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Examen Neurológico</mat-label>
+                    <input [(ngModel)]="currentExamen.examen_neurologico" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Etario</mat-label>
+                    <input [(ngModel)]="currentExamen.diagnostico_etario" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Nutricional</mat-label>
+                    <input [(ngModel)]="currentExamen.diagnostico_nutricional" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Inmunológico</mat-label>
+                    <input [(ngModel)]="currentExamen.diagnostico_inmunologico" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Socioeconómico</mat-label>
+                    <input [(ngModel)]="currentExamen.diagnostico_socioeconomico" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Patológico</mat-label>
+                    <input [(ngModel)]="currentExamen.diagnostico_patologico" matInput>
+                </mat-form-field>
+
+                <button (click)=registerExam() class="reg-button" mat-raised-button color="primary">Registrar</button>
+
+            </mat-tab>
+            
+            <!-- BUSCAR -->
+            
+            <mat-tab class="reg-button" label="Buscar">
+               
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Número de Identidad</mat-label>
+                    <input [(ngModel)]="getPatientID" maxlength="13" required type="number" matInput>
+                </mat-form-field>
+
+                <button (click)=getExamDates() class="search-button" mat-raised-button color="primary">Buscar</button>
+
+                <!-- <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Fecha de Examen</mat-label>
+                    <input required [(ngModel)]="patientDate" required matInput disabled [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker disabled="false"></mat-datepicker>
+                </mat-form-field> -->
+
+                <mat-form-field class="date-style" appearance="fill">
+                    <mat-label>Fecha del Examen</mat-label>
+                    <mat-select [(ngModel)]="getExamDate">
+                      <mat-option *ngFor="let examen of showExamDates" [value]="examen">{{examen}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button (click)=getExam() class="search-button" mat-raised-button color="primary">Mostrar</button>
+
+                <br/>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Peso (kg)</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.peso" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Talla</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.talla" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Perímetro Cefálico</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.perimetro_cefalico" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Temperatura (Celsius)</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.temperatura" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Presion Arterial</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.presion_arterial" maxlength="5" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Frecuencia Cardiaca</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.frecuencia_cardiaca" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Frecuencia Respiratoria</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.frecuencia_respiratoria" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Pulso</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.pulso" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Saturación Oxígeno</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.saturacion_oxigeno" maxlength="3" type="number" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Cabeza</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.cabeza" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Ojos</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.ojos" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Oidos</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.oidos" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Nariz</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.nariz" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Boca</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.boca" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Cuello</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.cuello" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Torax</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.torax" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Abdomen</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.abdomen" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Genitales</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.genitales" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Extremidades</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.extremidades" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Tacto Rectal y Vaginal</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.tacto_rectal_vaginal" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Piel y Faneras</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.piel_y_faneras" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Examen Neurológico</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.examen_neurologico" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Etario</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.diagnostico_etario" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Nutricional</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.diagnostico_nutricional" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Inmunológico</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.diagnostico_inmunologico" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Socioeconómico</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.diagnostico_socioeconomico" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="field-style" appearance="fill">
+                    <mat-label>Diagnóstico Patológico</mat-label>
+                    <input disabled [(ngModel)]="getExamObj.diagnostico_patologico" matInput>
+                </mat-form-field>
+
+            </mat-tab>
+
+          </mat-tab-group>
+    </div>
+</div>

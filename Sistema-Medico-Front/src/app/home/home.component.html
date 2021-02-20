@@ -2,6 +2,7 @@
     <app-nav-bar>
     </app-nav-bar>
     <div>
+        <h1 class="title">Pacientes</h1>
         <mat-tab-group class="card-style" dynamicHeight>
             <mat-tab class="tab-style" label="Registrar">
                 
@@ -16,7 +17,7 @@
                 </mat-form-field>
 
                 <mat-form-field class="date-style" appearance="fill">
-                    <mat-label>Escoja una fecha</mat-label>
+                    <mat-label>Fecha de Nacimiento</mat-label>
                     <input [(ngModel)]="patientDate" required matInput disabled [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker disabled="false"></mat-datepicker>
