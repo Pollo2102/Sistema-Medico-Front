@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:5714'
+  apiUrl: 'https://sis-med-back.herokuapp.com'
 };
