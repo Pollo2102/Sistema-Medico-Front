@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Sistema-Medico-Front",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
