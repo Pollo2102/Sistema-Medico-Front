@@ -2,8 +2,8 @@
     <app-nav-bar>
     </app-nav-bar>
     <div>
-        <h1 class="title">Examen Físico</h1>
-        <mat-tab-group class="card-style" dynamicHeight>
+        <h1 style="background-color: #64b6ac; color: white; font-weight: bold;" class="title">Examen Físico</h1>
+        <mat-tab-group style="color: white; font-weight: bold;" class="card-style" dynamicHeight>
             <mat-tab class="tab-style" label="Registrar">
                 
                 <mat-form-field class="field-style" appearance="fill">
@@ -155,7 +155,7 @@
                     <input [(ngModel)]="currentExamen.diagnostico_patologico" matInput>
                 </mat-form-field>
 
-                <button (click)=registerExam() class="reg-button" mat-raised-button color="primary">Registrar</button>
+                <button style="background-color: #64b6ac; color: white; font-weight: bold; width: 8em;" (click)=registerExam() class="reg-button" mat-raised-button color="primary">Registrar</button>
 
             </mat-tab>
             
@@ -168,7 +168,7 @@
                     <input [(ngModel)]="getPatientID" maxlength="13" required type="number" matInput>
                 </mat-form-field>
 
-                <button (click)=getExamDates() class="search-button" mat-raised-button color="primary">Buscar</button>
+                <button style="background-color: #64b6ac; color: white; font-weight: bold; width: 8em;" (click)=getExamDates() class="search-button" mat-raised-button color="primary">Buscar</button>
 
                 <!-- <mat-form-field class="date-style" appearance="fill">
                     <mat-label>Fecha de Examen</mat-label>
@@ -184,7 +184,7 @@
                     </mat-select>
                 </mat-form-field>
 
-                <button (click)=getExam() class="search-button" mat-raised-button color="primary">Mostrar</button>
+                <button style="background-color: #64b6ac; color: white; font-weight: bold; width: 8em;" (click)=getExam() class="search-button" mat-raised-button color="primary">Mostrar</button>
 
                 <br/>
 

@@ -18,10 +18,14 @@
 
 .title {
   margin: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Montserrat', sans-serif;
 };
 
 .text {
   margin: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+  margin-left: 20em;
 }

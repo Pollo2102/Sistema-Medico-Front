@@ -1,7 +1,7 @@
 <div>
     <mat-sidenav-container>
         <mat-sidenav-content>
-        <mat-toolbar color="primary">
+        <mat-toolbar style="background-color: #64b6ac; color: white; font-weight: bold;" class="nav-title">
             <span class="nav-title">Sistema de Información de Salud</span>
         </mat-toolbar>
         </mat-sidenav-content>
@@ -9,7 +9,7 @@
     <div class="content">
         <mat-card class="card-style">
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <h1 class="title">Ingresar</h1>
+                <h1 class="title">Iniciar Sesión</h1>
                 <mat-form-field>
                   <mat-label for="username">Correo</mat-label>
                   <input required formControlName="username" matInput placeholder="ejemplo@gmail.con">
@@ -20,7 +20,7 @@
                   <input required formControlName="password" type="password" matInput/>
                 </mat-form-field>
                 <br/><br/>
-                <button mat-raised-button color="primary">Ingresar</button>
+                <button style="background-color: #64b6ac; color: white; font-weight: bold; width: 10em;" class="button" mat-raised-button>Ingresar</button>
               </form>
         </mat-card>
     </div>

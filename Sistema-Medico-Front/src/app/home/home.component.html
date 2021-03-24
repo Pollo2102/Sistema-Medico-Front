@@ -2,8 +2,8 @@
     <app-nav-bar>
     </app-nav-bar>
     <div>
-        <h1 class="title">Pacientes</h1>
-        <mat-tab-group class="card-style" dynamicHeight>
+        <h1 style="background-color: #64b6ac; color: white; font-weight: bold;"  class="title">Pacientes</h1>
+        <mat-tab-group style=" color: white; font-weight: bold;" class="card-style" dynamicHeight>
             <mat-tab class="tab-style" label="Registrar">
                 
                 <mat-form-field class="field-style" appearance="fill">
@@ -145,7 +145,7 @@
                 <br/>
 
                 <div class="reg-button">
-                    <button (click)="registerPatient()" mat-raised-button color="primary">Registrar</button>
+                    <button style="background-color: #64b6ac; color: white; font-weight: bold; width: 8em;"  (click)="registerPatient()" mat-raised-button color="primary">Registrar</button>
                 </div>
                 
             </mat-tab>
@@ -158,7 +158,7 @@
                     <input [(ngModel)]="getPatientID" maxlength="13" required type="number" matInput>
                 </mat-form-field>
 
-                <button (click)="getPatient()" class="search-button" mat-raised-button color="primary">Buscar</button>
+                <button style="background-color: #64b6ac; color: white; font-weight: bold; width: 8em;" (click)="getPatient()" class="search-button" mat-raised-button color="primary">Buscar</button>
 
                 <br/>
 

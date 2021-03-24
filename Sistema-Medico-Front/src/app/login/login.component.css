@@ -7,11 +7,12 @@
     margin-right: auto;
     display: block;
     max-width: 350px;
-    padding: 40px;
+    padding: 40px 10px 40px 150px;
     font-weight: 900;
-    box-shadow: 5px 5px 5px -1px black;
+    box-shadow: 1px 1px 1px 5px rgb(21, 172, 159);
     border-color: black;
-    background-color: rgb(240, 141, 48);
+    border-width: 1em;
+    /* background-color: rgb(39, 156, 117); */
 }
 
 .content {
@@ -23,11 +24,16 @@
 
 .title {
     margin: 0;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
 .nav-title {
     margin: 0;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+    color: rgb(21, 172, 159);
+    font-family: 'Montserrat', sans-serif;
 }

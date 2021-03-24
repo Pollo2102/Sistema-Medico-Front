@@ -18,6 +18,7 @@ html,body {
     border-color: black;
     color: white;
     background-color: rgb(116, 0, 170);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .body {
@@ -36,35 +37,40 @@ html,body {
     padding-left: 35px;
     padding-right: 35px;
     font-weight: 900;
-    box-shadow: 5px 5px 5px -1px black;
+    box-shadow: 1px 1px 1px 5px rgb(21, 172, 159);
+    border-width: 1em;
     border-color: black;
-    background-color: rgb(243, 200, 59);
 }
 
 .field-style {
     margin: 25px 25px 15px 0px;
     max-width: 350px;
     width: 20em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .date-style {
     margin: 25px 25px 15px 0px;
     max-width: 350px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-area-style {
     margin: 25px 25px 15px 0px;
     max-width: 35em;
     width: 25em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .reg-button {
     float: right;
     clear: both;
     margin-right: 4%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .search-button {
     margin-right: 4%;
     margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;
 }
