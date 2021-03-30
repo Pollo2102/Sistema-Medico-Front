@@ -23,6 +23,7 @@ jobs:
         run: cd Sistema-Medico-Front && npm run build -- --prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entrypoint: Sistema-Medico-Front/
           repoToken: '${{ secrets.ACCESS_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIS_MED_FRONT_CBD8E }}'
           channelId: live
