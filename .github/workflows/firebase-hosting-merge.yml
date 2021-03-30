@@ -14,7 +14,7 @@ jobs:
       - name: npm dependencies
         run: npm install
       - name: Build
-        run: npm run build -- --prod
+        run: cd Sistema-Medico-Front && npm run build -- --prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
