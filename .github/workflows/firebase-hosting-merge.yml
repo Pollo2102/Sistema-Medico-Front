@@ -18,7 +18,7 @@ jobs:
       - name: npm dependencies
         run: npm install
       - name: Install angular
-        run: npm install -g @angular/cli > /dev/null && ng update && npm update
+        run: npm install -g @angular/cli > /dev/null && cd Sistema-Medico-Front && ng update && npm update
       - name: Build
         run: cd Sistema-Medico-Front && npm run build -- --prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
