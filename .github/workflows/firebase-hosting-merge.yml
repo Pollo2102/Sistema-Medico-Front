@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 14.4.0
       - name: npm dependencies
-        run: npm install
+        run: npm install angular-cli
       - name: Build
         run: cd Sistema-Medico-Front && npm run build -- --prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
