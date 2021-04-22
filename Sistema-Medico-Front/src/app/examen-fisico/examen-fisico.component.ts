@@ -65,6 +65,10 @@ export class ExamenFisicoComponent implements OnInit {
     let newDate = new Date(this.getExamDate);
     this.examService.getExam(this.getPatientID, `${newDate.getUTCFullYear()}-${newDate.getUTCMonth()+1}-${newDate.getUTCDate()}`)
     .subscribe(data => {
+      if (data == null) {
+        console.log("The exam doesn't exist.");
+        return;
+      }
       this.getExamObj = data;
       this.showDate = this.reformat_date(this.getExamObj.fecha_examen);
     });

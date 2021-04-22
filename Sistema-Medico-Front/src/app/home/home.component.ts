@@ -96,6 +96,10 @@ export class HomeComponent implements OnInit {
       }
       this.patientService.getPatient(this.getPatientID)
       .subscribe(data => {
+        if (data == null) {
+          console.log("The patient doesn't exist.");
+          return;
+        }
         this.getPatientObj = data;
         this.updateGetFields();
       })
