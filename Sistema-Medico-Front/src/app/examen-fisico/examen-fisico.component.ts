@@ -1,5 +1,6 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { Patient } from '../models/patient'
 import { Physical_Exam_Adult } from '../models/physical_exam_adult'
@@ -100,7 +101,11 @@ export class ExamenFisicoComponent implements OnInit {
 
   reformat_date = (ref_date) => {
     console.log(`Reformat Date prev: ${ref_date}`);
-    let newDate = new Date(ref_date /* this.currentExamen.fecha_examen */);
+    let newDate;
+    if (!environment.production)
+      newDate = new Date(ref_date /* this.currentExamen.fecha_examen */);
+    else
+      newDate = new Date(ref_date + 86400000);
 
     let month = String(newDate.getMonth() + 1);
     let day = String(newDate.getDate());
@@ -108,6 +113,7 @@ export class ExamenFisicoComponent implements OnInit {
   
     if (month.length < 2) month = '0' + month;
     if (day.length < 2) day = '0' + day;
+
   
     return `${month}/${day}/${year}`;
   }
