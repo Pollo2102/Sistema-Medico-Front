@@ -102,10 +102,14 @@ export class ExamenFisicoComponent implements OnInit {
   reformat_date = (ref_date) => {
     console.log(`Reformat Date prev: ${ref_date}`);
     let newDate;
+    let prdDate;
     if (!environment.production)
       newDate = new Date(ref_date /* this.currentExamen.fecha_examen */);
-    else
-      newDate = new Date(ref_date + 86400000);
+    else 
+    {
+      prdDate = new Date(ref_date);
+      newDate = new Date(prdDate.getTime() + 86400000);
+    }
 
     let month = String(newDate.getMonth() + 1);
     let day = String(newDate.getDate());
